@@ -47,6 +47,16 @@
         name="org.eclipse.tm.terminal.feature.feature.group"/>
   </setupTask>
   <setupTask
+      xsi:type="setup.p2:P2Task"
+      label="Sonar">
+    <requirement
+        name="org.sonarlint.eclipse.feature.feature.group"/>
+    <requirement
+        name="org.sonarlint.eclipse.jdt.feature.feature.group"/>
+    <repository
+        url="http://eclipse.sonarlint.org"/>
+  </setupTask>
+  <setupTask
       xsi:type="setup:EclipseIniTask"
       option="-Xmx"
       value="2048m"
